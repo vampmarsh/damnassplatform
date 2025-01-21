@@ -1,0 +1,151 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Основной контейнер */
+#app {
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Шапка */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header #user-count {
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+/* Окно чата */
+#chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #e9eef3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Сообщения */
+.message {
+    max-width: 75%;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.self {
+    background-color: #d2f8d2;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.message.other {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+/* Форма ввода */
+footer {
+    background-color: #f7f9fc;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+#message-input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивность для больших экранов */
+@media (min-width: 1024px) {
+    #app {
+        height: 90vh;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    #chat-window {
+        padding: 30px;
+        gap: 15px;
+    }
+
+    .message {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+}

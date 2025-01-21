@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат-платформа</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header-left">
+                <h1>Чат 2.0</h1>
+            </div>
+            <div class="header-right">
+                <span id="user-count">Участники: 0</span>
+            </div>
+        </header>
+        <main id="chat-window">
+            <div id="messages"></div>
+        </main>
+        <footer>
+            <form id="message-form">
+                <input id="message-input" type="text" placeholder="Введите сообщение..." required autocomplete="off" />
+                <button type="submit">➤</button>
+            </form>
+        </footer>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
